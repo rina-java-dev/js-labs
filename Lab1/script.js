@@ -1,3 +1,6 @@
+alert("Этот код выполнен из внешнего файла!");
+console.log("Сообщение в консоли");
+
 let name = 'Marina Gumeniuc';
 let birthYear = 2004;
 let isStudent = true; // or 1
