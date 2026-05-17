@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Лабораторная работа №5</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Инвентарь</h1>
+
+    <form id="item-form" class="item-form">
+      <label>
+        Название предмета:
+        <input type="text" id="name" placeholder="Например: Steel Sword" />
+      </label>
+
+      <label>
+        Категория:
+        <select id="category">
+          <option value="">Выберите категорию</option>
+          <option value="armor">Armor</option>
+          <option value="weapon">Weapon</option>
+          <option value="potion">Potion</option>
+        </select>
+      </label>
+
+      <label>
+        Редкость:
+        <select id="rarity">
+          <option value="">Выберите редкость</option>
+          <option value="common">Common</option>
+          <option value="uncommon">Uncommon</option>
+          <option value="rare">Rare</option>
+          <option value="legendary">Legendary</option>
+        </select>
+      </label>
+
+      <label>
+        Описание:
+        <textarea id="description" placeholder="Введите описание предмета"></textarea>
+      </label>
+
+      <label>
+        Урон:
+        <input type="number" id="damage" placeholder="Только для weapon" min="0" />
+      </label>
+
+      <button type="submit">Добавить предмет</button>
+    </form>
+
+    <p id="error-message" class="error-message"></p>
+
+    <h2>Список предметов</h2>
+
+    <table id="inventory-table">
+      <thead>
+        <tr>
+          <th>Название предмета</th>
+          <th>Категория</th>
+          <th>Редкость</th>
+          <th>Урон</th>
+          <th>Действие</th>
+        </tr>
+      </thead>
+
+      <tbody id="inventory-body">
+      </tbody>
+    </table>
+
+    <p class="total">
+      Всего предметов: <span id="total-items">0</span>
+    </p>
+
+    <section class="details">
+      <h2>Описание предмета</h2>
+      <p id="item-description">Наведите курсор на предмет, чтобы увидеть описание.</p>
+    </section>
+  </main>
+
+  <script type="module" src="./src/index.js"></script>
+</body>
+</html>
